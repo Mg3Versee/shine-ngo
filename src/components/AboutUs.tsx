@@ -4,8 +4,12 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <section className="w-full py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="w-full py-20 bg-white relative overflow-hidden">
+      
+      {/* Background Shape */}
+      <div className="absolute right-0 top-0 w-[450px] h-[450px] bg-orange-100 rounded-full blur-3xl opacity-70 translate-x-1/3 -translate-y-1/3"></div>
+
+      <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
 
         {/* LEFT CONTENT */}
         <div>
@@ -35,13 +39,15 @@ export default function AboutUs() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="flex justify-center">
+        <div className="flex justify-center relative">
+          <div className="absolute -z-10 w-[300px] h-[300px] bg-orange-200 rounded-3xl rotate-6 opacity-40 blur-xl"></div>
+
           <Image
             src="/about/about-1.png"
             alt="Children"
             width={100}
             height={100}
-            className="w-full h-full object-cover rounded-md shadow-md"
+            className="w-full h-full object-cover rounded-xl shadow-xl"
           />
         </div>
       </div>

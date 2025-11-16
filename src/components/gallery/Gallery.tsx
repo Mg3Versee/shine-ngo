@@ -21,18 +21,23 @@ export default function GalleryPage() {
           <Link
             key={index}
             href={`/gallery/${img.slug}`}
-            className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 bg-white block"
+            className="relative group rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 bg-white block"
           >
+            {/* Image */}
             <Image
               src={img.src}
               alt={img.name}
               width={400}
               height={300}
-              className="w-full h-[250px] object-cover"
+              className="w-full h-[250px] object-cover transition-transform duration-500 group-hover:scale-110"
             />
 
-            <div className="p-4 text-center text-lg font-semibold text-[#1C3C35]">
-              {img.name}
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 
+                transition-all duration-300 flex items-center justify-center">
+              <h2 className="text-white text-xl font-semibold">
+                {img.name}
+              </h2>
             </div>
           </Link>
         ))}
