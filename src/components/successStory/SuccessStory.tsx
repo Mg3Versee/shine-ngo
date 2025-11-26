@@ -23,6 +23,21 @@ const SuccessStory =() => {
       image: "/stories/durga.jpg",
       link: "/success-stories/durga",
     },
+  {
+    name: "Joshna",
+    desc: "Joshna's Journey: From Car Driver to Beauty Entrepreneur",
+    image: "/stories/placeholder.jpg",
+    link: "/success-stories/joshna",
+  
+  },
+  {
+    name: "Sri Devi",
+    desc: "Sri Devi Triumph: From Tailor to Business Owner",
+    image:"/stories/Sridevi.jpg",
+    link: "/success-stories/sridevi",
+  
+  },
+
   ];
 
   return (
@@ -57,13 +72,13 @@ const SuccessStory =() => {
       </div>
 
       {/* View More Button */}
-      <div className="text-center mt-12">
+      {/* <div className="text-center mt-12">
         <Link href="/success-stories/all">
           <button className="bg-[#FF7E47] text-white px-10 py-3 rounded-lg text-lg font-semibold hover:bg-[#ff945f] duration-300">
             View More
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

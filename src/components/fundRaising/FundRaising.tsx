@@ -4,15 +4,30 @@ import Link from "next/link";
 
 export default function FundRaising() {
   const images = [
-    { src: "/gallery/1.jpg", slug: "image-1" },
-    { src: "/gallery/2.jpg", slug: "image-2" },
-    { src: "/gallery/3.jpeg", slug: "image-3" },
+    {
+      src: "/nitya annna.webp",
+      slug: "image-1",
+      title: "Nityaannadanam",
+      description: "Share a meal, spread love—donate today to fight hunger!",
+    },
+    {
+      src: "/camp.webp",
+      slug: "image-2",
+      title: "Temple Construction",
+      description:
+        "Join hands to build a sacred legacy—let's construct a temple of faith, unity, and devotion!.",
+    },
+    {
+      src: "/Ration.webp",
+      slug: "image-3",
+      title: "Ration",
+      description:
+        "Your donation feeds orphans, ensuring no one sleeps hungry.",
+    },
   ];
 
   return (
     <div className="w-full bg-[#F5F5F5] pb-20">
-
-      {/* Heading */}
       <div className="text-center pt-16 pb-10">
         <h1 className="text-4xl font-bold text-[#1C3C35]">
           SERVING HUMANITY WITH DEVOTION
@@ -34,21 +49,29 @@ export default function FundRaising() {
             key={index}
             className="group rounded-2xl overflow-hidden hover:-translate-y-2 hover:rotate-1 transition-all duration-300"
           >
-            {/* Image */}
             <div className="overflow-hidden rounded-full">
               <Image
                 src={img.src}
-                alt="Gallery Image"
+                alt={img.title}
                 width={400}
                 height={300}
                 className="w-full h-[250px] object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>
 
+            {/* Title */}
+            <h3 className="text-center text-xl font-semibold text-[#1C3C35] mt-4">
+              {img.title}
+            </h3>
+            <h4 className="text-center text-lg font-normal text-[#1C3C35] mt-4">
+              {img.description}
+            </h4>
+
             {/* Button on Hover */}
             <div className="p-5 text-center">
               <Link
-                href={`/gallery/${img.slug}`}
+                href="https://your-qr-link-here.com"
+                target="_blank"
                 className="opacity-0 group-hover:opacity-100 transition-all duration-300 inline-block bg-[#FF7A33] text-white font-semibold px-6 py-2 rounded-full shadow hover:bg-[#e26a2d]"
               >
                 Donate
