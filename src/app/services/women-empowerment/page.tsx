@@ -1,4 +1,4 @@
-import WomenEmpowerment from '../../../components/service/WomenEmpowerment'
+import WomenEmpowerment from '../../../components/ourService1/WomenEmpowerment'
 import React from 'react'
 
 const page = () => {

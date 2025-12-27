@@ -13,7 +13,7 @@ const Cause: React.FC = () => {
         </h2>
 
         <p className="mx-auto mb-10 max-w-3xl text-sm leading-relaxed text-[#666] md:text-[15px]">
-          Amma Nanna Anaadha Aashramam organizes several seminars &amp; events
+         Shinengo old age home organizes several seminars &amp; events
           to arouse individuals to come forward and be a part of this large
           public welfare in supporting the change that's for good and inspire
           even others to join.

@@ -1,10 +1,10 @@
-import OldAge from '../../../components/ourService1/OldAge'
+import LatestUpdates from '../../../src/components/latestUpdates/LatestUpdates'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <OldAge />
+        <LatestUpdates />
     </div>
   )
 }
