@@ -1,67 +1,51 @@
 "use client";
-import Image from "next/image";
+
+import { useState } from "react";
 import Link from "next/link";
-const OurService =()  =>{
-  const services = [
-    {
-      title: "Old Age Home",
-      image: "/service/oldage.jpg",
-      link: "/services/old-age-home",
-    },
-    {
-      title: "Child Education",
-      image: "/service/child-edu.jpg",
-      link: "/services/child-education",
-    },
-    {
-      title: "Covid Widow Women",
-      image: "/service/covid-women.jpg",
-      link: "/services/covid-widow-women",
-    },
-    {
-      title: "Project Raksha",
-      image: "/service/raksha.jpg",
-      link: "/services/project-raksha",
-    },
-    {
-      title: "Women Empowerment",
-      image: "/service/women-emp.jpg",
-      link: "/services/women-empowerment",
-    },
-    {
-      title: "Youth’s Empowerment",
-      image: "/service/youth.jpg",
-      link: "/services/youth-empowerment",
-    },
-  ];
+import { FaChevronDown } from "react-icons/fa";
+
+export default function Navbar() {
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="w-full bg-[#F5F9F8] min-h-screen pb-20 pt-10">
-      <h1 className="text-center text-4xl font-bold text-[#0D2A1B] mb-10">
-        Our Services
-      </h1>
+    <nav className="bg-white shadow-md relative z-50">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center gap-6">
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-4">
-        {services.map((item, index) => (
-          <Link key={index} href={item.link}>
-            <div className="bg-white rounded-lg shadow-md hover:shadow-lg cursor-pointer duration-300">
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={500}
-                height={300}
-                className="rounded-t-lg w-full h-60 object-cover"
-              />
-              <h3 className="text-center text-lg font-bold py-4">
-                {item.title}
-              </h3>
-            </div>
-          </Link>
-        ))}
+        {/* Services */}
+        <div
+          className="relative"
+          onMouseEnter={() => setOpenMenu(true)}
+          onMouseLeave={() => setOpenMenu(false)}
+        >
+          <button className="flex items-center gap-1 font-semibold text-[#fe7f4c]">
+            Services <FaChevronDown size={12} />
+          </button>
+
+          {openMenu && (
+            <ul className="absolute top-full left-0 mt-3 bg-white shadow-lg rounded-md w-64 border">
+              {[
+                { name: "Old Age Home", link: "/services/old-age-home" },
+                { name: "Child Education", link: "/services/child-education" },
+                { name: "Covid Widow Women", link: "/services/covid-widow-women" },
+                { name: "Project Raksha", link: "/services/project-raksha" },
+                { name: "Women Empowerment", link: "/services/women-empowerment" },
+                { name: "Youth’s Empowerment", link: "/services/youth-empowerment" },
+              ].map((item, i) => (
+                <li key={i}>
+                  <Link
+                    href={item.link}
+                    onClick={() => setOpenMenu(false)}
+                    className="block px-4 py-3 hover:bg-gray-100"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
       </div>
-    </div>
+    </nav>
   );
 }
-
-
-export default OurService;

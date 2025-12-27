@@ -18,7 +18,7 @@ const updates: UpdateItem[] = [
     id: 2,
     image: "/images/update-2.jpg",
     date: "January 21, 2025",
-    title: "Amma Nanna Orphanage Rescues and Rebuilds an Elderly Man’s Life",
+    title: "ShineNgo Orphanage Rescues and Rebuilds an Elderly Man’s Life",
   },
   {
     id: 3,

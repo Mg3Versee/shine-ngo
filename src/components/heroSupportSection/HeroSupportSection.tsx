@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 const  HeroSupportSection = () => {
@@ -16,9 +17,9 @@ const  HeroSupportSection = () => {
           </div>
 
           {/* Button */}
-          <button className="bg-[#FF7A3E] text-white px-8 py-3 rounded-md font-semibold shadow-lg hover:opacity-90">
+          <Link href="/donate" className="bg-[#FF7A3E] text-white px-8 py-3 rounded-md font-semibold shadow-lg hover:opacity-90">
             Donate Now
-          </button>
+          </Link>
         </div>
       </div>
     </section>
