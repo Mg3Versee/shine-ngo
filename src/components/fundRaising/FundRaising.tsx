@@ -13,11 +13,11 @@ export default function FundRaising() {
     {
       src: "/service/oldage.jpg",
       slug: "image-2",
-      title: "old age home ",
+      title: "Old Age Home ",
       description:
         "Join hands to build a sacred legacy—let's construct a temple of faith, unity, and devotion!.",
     },
-    {
+    {   
       src: "/Ration.webp",
       slug: "image-3",
       title: "Ration",

@@ -1,6 +1,7 @@
 import React from 'react'
 import PageBanner from '../PageBanner'
 import ServicesSidebar from '../ServicesSidebar'
+import Razorpay from '../razorpay/Razorpay'
 
 const ProjectRaksha = () => {
   return (
@@ -27,6 +28,7 @@ const ProjectRaksha = () => {
                <li>Financial Management</li>
                <li>Housing</li>
              </ul>
+             <Razorpay />
            </div>
    
            <ServicesSidebar active="Project Raksha" />

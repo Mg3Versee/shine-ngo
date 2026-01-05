@@ -3,6 +3,7 @@
 import Link from "next/link";
 import PageBanner from "../PageBanner";
 import ServicesSidebar from "../ServicesSidebar";
+import Razorpay from "../razorpay/Razorpay";
 
 const IdliHub =() =>{
   return (
@@ -25,6 +26,7 @@ const IdliHub =() =>{
           <p className="text-gray-600 leading-7">
             The initiative has been a huge support to the needy with thousands benefiting every month...
           </p>
+          <Razorpay />
         </div>
 
   <ServicesSidebar active="Rs5-Idli-Hub" />

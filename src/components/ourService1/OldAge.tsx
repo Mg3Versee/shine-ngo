@@ -1,6 +1,7 @@
 import React from "react";
 import ServicesSidebar from "../ServicesSidebar";
 import PageBanner from "../PageBanner";
+import Razorpay from "../razorpay/Razorpay";
 
 const OldAge =() =>{
   return (
@@ -62,6 +63,7 @@ const OldAge =() =>{
 
           <h3 className="font-semibold">Together, Let’s Make Aging Beautiful</h3>
           <p>For service, donations or visits, contact Shine NGO.</p>
+          <Razorpay />
         </div>
  <ServicesSidebar active="Old Age Women" />
       </div>

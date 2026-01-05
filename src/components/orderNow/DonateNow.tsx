@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import PageBanner from "../PageBanner";
+import Razorpay from "../razorpay/Razorpay";
 
 const DonateNow = () => {
   return (
@@ -78,6 +79,7 @@ const DonateNow = () => {
             <p className="mt-3 text-xs font-medium text-gray-600">
               SCAN & PAY WITH ANY UPI APP
             </p>
+            <Razorpay />
           </div>
         </div>
       </section>
