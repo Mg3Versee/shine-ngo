@@ -1,4 +1,4 @@
-import DonateNow from '@/src/components/orderNow/DonateNow'
+import DonateNow from '@/src/components/donateNow/DonateNow'
 import React from 'react'
 
 const page = () => {

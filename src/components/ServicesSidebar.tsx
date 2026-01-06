@@ -6,7 +6,7 @@ interface SidebarProps {
   active: string;
 }
 
-export default function ServicesSidebar({ active }: SidebarProps) {
+const ServicesSidebar =({ active }: SidebarProps) =>{
   const items = [
     { label: "Old Age Home", href: "/services/old-age-home" },
     { label: "Rs. 5 Idli Hub", href: "/services/rs5-idli-hub" },
@@ -54,3 +54,4 @@ export default function ServicesSidebar({ active }: SidebarProps) {
     </>
   );
 }
+export default ServicesSidebar;

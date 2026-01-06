@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function AboutUs() {
+const AboutUs =() => {
   return (
     <section className="w-full py-20 bg-white relative overflow-hidden">
       
@@ -54,3 +54,5 @@ export default function AboutUs() {
     </section>
   );
 }
+
+export default AboutUs;

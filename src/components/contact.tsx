@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Get in touch with Shine NGO for support, volunteering, or donations.",
 };
 
-export default function ContactPage() {
+const Contact =() =>{
   return (
     <main className="w-full bg-gray-50">
 
@@ -141,3 +141,6 @@ export default function ContactPage() {
     </main>
   );
 }
+
+
+export default Contact;

@@ -5,12 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
-export default function Navbar() {
+const Navbar =() =>{
   const [openMenu, setOpenMenu] = useState(false);
-  const [openServices, setOpenServices] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  const closeDropdown = () => setOpen(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
     <nav className="w-full bg-white shadow-sm sticky top-0 z-50">
@@ -22,114 +19,97 @@ export default function Navbar() {
             alt="Logo"
             width={300}
             height={200}
-            className="h-14 cursor-pointer"
+            className="h-14 w-auto cursor-pointer"
           />
         </Link>
-        <div className="hidden lg:flex items-center gap-10">
-          <Link
-            href="/"
-            className="text-[#fe7f4c] cursor-pointer font-raleway font-bold text-md"
-          >
+
+        <div className="hidden lg:flex items-center gap-10 font-raleway font-bold text-md">
+          <Link href="/" className="text-[#fe7f4c]">
             HOME
           </Link>
-          <Link
-            href="/about"
-            className="text-[#fe7f4c] cursor-pointer font-raleway font-bold text-md"
-          >
+
+          <Link href="/about" className="text-[#fe7f4c]">
             About Us
           </Link>
 
-          <div className="relative group cursor-pointer font-raleway font-bold text-md">
-<div
-  className="relative cursor-pointer group"
-  onMouseEnter={() => setOpen(true)}
-  onMouseLeave={() => setOpen(false)}
->
-  {/* SERVICES BUTTON */}
-  <h1
-    className={`
-      relative flex items-center gap-1 pb-1 font-bold text-md text-[#fe7f4c]
-      after:content-[''] after:absolute after:left-0 after:w-full 
-      after:-bottom-[2px] after:h-[3px] after:bg-[#c08b0d]
-      after:scale-x-0 after:origin-center after:transition-transform after:duration-300
-      ${open ? "after:scale-x-100" : ""}
-    `}
-  >
-    Services
-    <FaChevronDown
-      size={12}
-      className={`mt-0.5 transition-transform duration-300 ${
-        open ? "rotate-180" : "rotate-0"
-      }`}
-    />
-  </h1>
-
-  {/* DROPDOWN BELOW SERVICES */}
-  {open && (
-    <div className="absolute left-0 top-[100%] mt-2 min-w-[260px] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] rounded-md py-3 z-50 animate-fadeIn">
-      <div className="flex flex-col font-medium leading-[130%]">
-        {[
-          { href: "/services/old-age-home", label: "Old Age Home" },
-          { href: "/services/rs5-idli-hub", label: "Rs.5 Idli Hub" },
-          { href: "/services/child-education", label: "Child Education" },
-          { href: "/services/covid-widow-women", label: "Covid Widow Women" },
-          { href: "/services/project-raksha", label: "Project Raksha" },
-          { href: "/services/women-empowerment", label: "Women Empowerment" },
-          { href: "/services/youth-empowerment", label: "Youth’s Empowerment" },
-        ].map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="px-5 py-2 text-gray-700 hover:text-[#fe7f4c] hover:bg-[#fff3eb] transition-all"
+          {/* SERVICES DROPDOWN */}
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
           >
-            {item.label}
-          </Link>
-        ))}
-      </div>
-    </div>
-  )}
-</div>
+            <button
+              type="button"
+              className={`
+                relative flex items-center gap-1 pb-1 text-[#fe7f4c]
+                after:content-[''] after:absolute after:left-0 after:w-full
+                after:-bottom-[2px] after:h-[3px] after:bg-[#c08b0d]
+                after:scale-x-0 after:origin-center after:transition-transform after:duration-300
+                ${servicesOpen ? "after:scale-x-100" : ""}
+              `}
+            >
+              Services
+              <FaChevronDown
+                size={12}
+                className={`transition-transform duration-300 ${
+                  servicesOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
 
-
-
-
+            {servicesOpen && (
+              <div className="absolute left-0 top-full min-w-[260px] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] rounded-md py-3 z-50">
+                <div className="flex flex-col font-medium">
+                  {[
+                    { href: "/services/old-age-home", label: "Old Age Home" },
+                    { href: "/services/rs5-idli-hub", label: "Rs.5 Idli Hub" },
+                    { href: "/services/child-education", label: "Child Education" },
+                    { href: "/services/covid-widow-women", label: "Covid Widow Women" },
+                    { href: "/services/project-raksha", label: "Project Raksha" },
+                    { href: "/services/women-empowerment", label: "Women Empowerment" },
+                    { href: "/services/youth-empowerment", label: "Youth’s Empowerment" },
+                  ].map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setServicesOpen(false)}
+                      className="px-5 py-2 text-gray-700 hover:text-[#fe7f4c] hover:bg-[#fff3eb] transition-all"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
-          <Link
-            href="/success-stories"
-            className="text-[#fe7f4c] cursor-pointer font-raleway font-bold text-md"
-          >
+          <Link href="/success-stories" className="text-[#fe7f4c]">
             Success Stories
           </Link>
 
-          <Link
-            href="/updates"
-            className="text-[#fe7f4c] cursor-pointer font-raleway font-bold text-md"
-          >
+          <Link href="/updates" className="text-[#fe7f4c]">
             Latest Updates
           </Link>
 
-          <Link
-            href="/gallery"
-            className="text-[#fe7f4c] cursor-pointer font-raleway font-bold text-md"
-          >
+          <Link href="/gallery" className="text-[#fe7f4c]">
             Gallery
           </Link>
 
-          <Link
-            href="/contact"
-            className="text-[#fe7f4c] cursor-pointer font-raleway font-bold text-md"
-          >
+          <Link href="/contact" className="text-[#fe7f4c] px-2">
             CONTACT US
           </Link>
         </div>
 
+        {/* Right Actions */}
         <div className="flex items-center gap-4">
-          <Link href="/donate" className="bg-[#FF7518] text-white px-4 py-4 rounded-xl font-bold text-[10px] leading-[100%] font-raleway">
+          <Link
+            href="/donate"
+            className="bg-[#FF7518] text-white md:px-2 text-center px-2 py-4 rounded-xl font-bold text-sm font-raleway"
+          >
             DONATE NOW!
           </Link>
 
-          {/* Mobile Menu button */}
+          {/* Mobile Menu Button */}
           <button
             className="lg:hidden text-3xl"
             onClick={() => setOpenMenu(!openMenu)}
@@ -138,29 +118,13 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
       {openMenu && (
-        <div className="lg:hidden bg-white border-t p-4 space-y-4 font-medium">
-          <Link href="/">HOME</Link>
+        <div className="lg:hidden  flex flex-col bg-white text-black cursor-pointer border-t p-4 space-y-4 font-raleway font-bold text-md">
+          <Link href="/" >HOME</Link>
           <Link href="/about">About Us</Link>
-
-          {/* Mobile Services dropdown */}
-          <button
-            className="flex items-center justify-between w-full"
-            onClick={() => setOpenServices(!openServices)}
-          >
-            Services <FaChevronDown />
-          </button>
-
-          {openServices && (
-            <div className="ml-4 mt-2 space-y-2 text-sm">
-              <Link href="/services/education">Education Support</Link>
-              <Link href="/services/medical">Medical Assistance</Link>
-              <Link href="/services/welfare">Welfare Programs</Link>
-              <Link href="/services/training">Skill Training</Link>
-            </div>
-          )}
-
-          <Link href="/success">Success Stories</Link>
+          <Link href="/success-stories">Success Stories</Link>
           <Link href="/updates">Latest Updates</Link>
           <Link href="/gallery">Gallery</Link>
           <Link href="/contact">CONTACT US</Link>
@@ -169,3 +133,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;

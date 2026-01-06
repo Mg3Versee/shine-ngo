@@ -1,4 +1,4 @@
-import OldAge from '../../../components/ourService1/OldAge'
+import OldAge from '../../../components/ourService/OldAge'
 import React from 'react'
 
 const page = () => {

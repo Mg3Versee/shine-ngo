@@ -7,7 +7,7 @@ interface PageBannerProps {
   image?: string;
 }
 
-export default function PageBanner({ title, image }: PageBannerProps) {
+const PageBanner =({ title, image }: PageBannerProps) => {
   return (
     <div className="w-full flex flex-col justify-center items-center  bg-opacity-80 text-white">
       
@@ -25,3 +25,4 @@ export default function PageBanner({ title, image }: PageBannerProps) {
     </div>
   );
 }
+ export default PageBanner;

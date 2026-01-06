@@ -1,4 +1,4 @@
-import YouthEmpowerment from '../../../components/ourService1/YouthsEmpowerment'
+import YouthEmpowerment from '../../../components/ourService/YouthsEmpowerment'
 import React from 'react'
 
 const page = () => {

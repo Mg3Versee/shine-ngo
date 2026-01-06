@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 type Testimonial = {
   id: number;
-  image: string;
   title: string;
   body: string;
   author: string;
@@ -13,7 +12,6 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    image: "/images/testimonial-1.png",
     title: "A Heartfelt Contribution for a Noble Cause",
     body: "Mrs. Bandi Sunanda from Hyderabad has donated 12,00,000/- towards the construction of the ground floor of the new building in memory of Bandi Reddy Garu. This generous contribution is paving the way for a safe and secure shelter for many children.",
     author: "Mrs. Bandi Sunanda",
@@ -21,7 +19,6 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    image: "/images/testimonial-2.png",
     title: "A Beacon of Generosity – Spreading Hope",
     body: "Sri Aravapalli Koteswara Rao Garu and Smt. Aravapalli Satyavathi Garu have donated 13,11,116/- towards the construction of the new building, extending compassionate support to countless orphans.",
     author: "Sri Aravapalli Koteswara Rao & Smt. Aravapalli Satyavathi",
@@ -29,7 +26,6 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    image: "/images/testimonial-3.png",
     title: "A Generous Act of Kindness – Lifting Lives",
     body: "Sri P. Jaya Prakash Reddy and Late Smt. Girija have contributed 21,00,000/- towards the new building lift, ensuring accessibility and safety for over 600 children at the ashram.",
     author: "Sri P. Jaya Prakash Reddy & Late Smt. Girija",
@@ -59,7 +55,7 @@ const TestimonialSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-orange-50/40 via-white to-white py-16 md:py-24">
+    <section className="bg-linear-to-b from-orange-50/40 via-white to-white py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         {/* Heading */}
         <div className="text-center mb-10 md:mb-14">
@@ -71,7 +67,7 @@ const TestimonialSection: React.FC = () => {
 
           </h2>
           <div className="mt-4 flex justify-center">
-            <span className="h-[2px] w-16 rounded-full bg-amber-500"></span>
+            <span className="h-0.5 w-16 rounded-full bg-amber-500"></span>
           </div>
         </div>
 
@@ -110,14 +106,7 @@ const TestimonialSection: React.FC = () => {
                     isCenter ? "md:scale-[1.02]" : "md:opacity-90",
                   ].join(" ")}
                 >
-                  {/* Plaque image */}
-                  <div className="flex items-center justify-center rounded-xl bg-slate-50/80 p-4">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="h-40 w-full object-contain"
-                    />
-                  </div>
+                 
 
                   {/* Content */}
                   <div className="mt-4 flex flex-1 flex-col">
@@ -126,7 +115,7 @@ const TestimonialSection: React.FC = () => {
                     </h3>
 
                     <div className="mt-3 flex items-center gap-2">
-                      <span className="inline-block h-[2px] w-10 rounded-full bg-amber-500" />
+                      <span className="inline-block h-0.5 w-10 rounded-full bg-amber-500" />
                       <span className="text-[11px] uppercase tracking-[0.18em] text-amber-700">
                         Donor Story
                       </span>

@@ -1,8 +1,7 @@
-// app/gallery/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 
-export default function GalleryPage() {
+const Gallery =()=> {
   const images = [
     { src: "/gallery/1.jpg", name: "Skill Course", slug: "skill-course" },
     { src: "/gallery/2.jpg", name: "Hope", slug: "hope" },
@@ -45,3 +44,5 @@ export default function GalleryPage() {
     </div>
   );
 }
+
+export default Gallery;

@@ -34,12 +34,12 @@ const Footer = () => {
             <Link href="/about" className="hover:text-[#FF7A3E] cursor-pointer">
               About us
             </Link>
-            {/* <Link
+            <Link
               href="/services"
               className="hover:text-[#FF7A3E] cursor-pointer"
             >
               Services
-            </Link> */}
+            </Link>
             <Link
               href="/success-stories"
               className="hover:text-[#FF7A3E] cursor-pointer"
@@ -91,22 +91,25 @@ const Footer = () => {
 
       {/* Social Icons */}
       <div className="flex justify-center gap-6 text-xl mt-10">
-        <Link href="https://facebook.com" target="_blank">
+        <Link href="https://www.facebook.com/shinengoindia" target="_blank">
           <FaFacebook className="hover:text-[#FF7A3E] cursor-pointer" />
         </Link>
-        <a href="https://twitter.com" target="_blank">
+        <a href="https://www.threads.com/@shine_ngo_official" target="_blank">
           <FaTwitter className="hover:text-[#FF7A3E] cursor-pointer" />
         </a>
-        <Link href="https://instagram.com" target="_blank">
+        <Link href="https://www.instagram.com/shine_ngo_official" target="_blank">
           <FaInstagram className="hover:text-[#FF7A3E] cursor-pointer" />
         </Link>
-        <Link href="https://youtube.com" target="_blank">
+        <Link href="https://www.youtube.com/shinengo" target="_blank">
           <FaYoutube className="hover:text-[#FF7A3E] cursor-pointer" />
         </Link>
       </div>
 
       {/* Copyright */}
       <p className="text-center text-gray-400 mt-8">© 2025 Shine NGO</p>
+      <p className="text-center text-gray-400 mt-8">Design and Developed by 
+        <Link href="https://www.mg3verse.com" target="_blank" className="hover:text-[#FF7A3E] ml-1">Mg3Verse</Link>
+      </p>
     </div>
   );
 };

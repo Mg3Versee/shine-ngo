@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 
-export default function Slider() {
+const Slider =() => {
   return (
     <div className="relative w-full">
       <Swiper
@@ -67,3 +67,4 @@ export default function Slider() {
     </div>
   );
 }
+export default Slider;

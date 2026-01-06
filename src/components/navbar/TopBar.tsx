@@ -10,7 +10,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
-export default function TopBar() {
+const TopBar =() => {
   return (
     <div className="w-full bg-white p-4">
       <div className="max-w-7xl mx-auto flex items-center justify-end gap-10 px-4">
@@ -18,7 +18,7 @@ export default function TopBar() {
         {/* Social Icons */}
         <div className="flex items-center gap-4 text-gray-600 text-[16px]">
           <Link
-            href="https://instagram.com"
+            href="https://www.instagram.com/shine_ngo_official"
             target="_blank"
             className="hover:text-orange-600"
           >
@@ -26,7 +26,7 @@ export default function TopBar() {
           </Link>
 
           <Link
-            href="https://twitter.com"
+            href="https://www.threads.com/@shine_ngo_official"
             target="_blank"
             className="hover:text-orange-600"
           >
@@ -34,7 +34,7 @@ export default function TopBar() {
           </Link>
 
           <Link
-            href="https://facebook.com"
+            href="https://www.facebook.com/shinengoindia"
             target="_blank"
             className="hover:text-orange-600"
           >
@@ -50,9 +50,9 @@ export default function TopBar() {
           </Link>
 
           <Link
-            href="https://youtube.com"
+            href="https://www.youtube.com/shinengo"
             target="_blank"
-            className="hover:text-orange-600"
+            className="hover:text-orange-600" 
           >
             <FaYoutube className="cursor-pointer" />
           </Link>
@@ -76,3 +76,4 @@ export default function TopBar() {
     </div>
   );
 }
+ export default TopBar;

@@ -1,8 +1,7 @@
-// app/gallery/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 
-export default function FundRaising() {
+const  FundRaising =() => {
   const images = [
     {
       src: "/nitya annna.webp",
@@ -82,3 +81,5 @@ export default function FundRaising() {
     </div>
   );
 }
+
+export default FundRaising;

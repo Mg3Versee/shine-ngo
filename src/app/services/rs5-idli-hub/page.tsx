@@ -1,4 +1,4 @@
-import IdliHub from '../../../components/ourService1/IdliHub'
+import IdliHub from '../../../components/ourService/IdliHub'
 import React from 'react'
 
 const page = () => {
