@@ -4,6 +4,7 @@ import ServicesSidebar from "../ServicesSidebar";
 import Razorpay from "../razorpay/Razorpay";
 import Image from "next/image";
 const WomenEmpowermentImages = [
+  { src: "/service/WomenEmpowerment/IMG_8341.JPG" },
   { src: "/service/WomenEmpowerment/1.JPG" },
   { src: "/service/WomenEmpowerment/2.JPG" },
   { src: "/service/WomenEmpowerment/3.JPG" },

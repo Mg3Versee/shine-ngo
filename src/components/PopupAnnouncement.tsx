@@ -23,7 +23,7 @@ const PopupAnnouncement: React.FC<PopupAnnouncementProps> = ({
       const timer = setTimeout(() => {
         setShow(true);
         localStorage.setItem("popupShown", "true");
-      }, 5000); // 5 seconds delay
+      }, 5000); 
 
       return () => clearInterval(timer);
     }

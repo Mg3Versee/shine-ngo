@@ -7,6 +7,7 @@ const Gallery =()=> {
     { src: "/gallery/2.jpg", name: "Hope", slug: "hope" },
     { src: "/gallery/3.jpeg", name: "Naa Disha", slug: "naa-disha" },
     { src: "/gallery/4.jpg", name: "Tailoring", slug: "tailoring" },
+    { src: "/gallery/5.jpg", name: "Old Age Home", slug: "oldagehome" },
   ];
 
   return (

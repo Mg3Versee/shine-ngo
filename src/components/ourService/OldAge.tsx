@@ -3,7 +3,15 @@ import PageBanner from "../PageBanner";
 import ServicesSidebar from "../ServicesSidebar";
 import Image from "next/image";
 import Razorpay from "../razorpay/Razorpay";
-
+const oldAgeImages = [
+  { src: "/service/Oldagehome/IMG-20250815-WA0019.jpg" },
+  { src: "/service/Oldagehome/oldage.jpg" },
+{ src: "/service/Oldagehome/oldage1.jpg" },
+{ src: "/service/Oldagehome/oldage2.jpg" },
+{ src: "/service/Oldagehome/oldage3.jpg" },
+{ src: "/service/Oldagehome/oldage4.jpg" },
+{ src: "/service/Oldagehome/oldage5.jpg" },
+];
 const OldAge = () => {
   return (
     <div>
@@ -45,15 +53,6 @@ const OldAge = () => {
               We believe that every elderly woman deserves the opportunity to
               live with peace, health, and joy.
             </p>
-
-            <Image
-              src="/service/Oldagehome/oldage1.JPG"
-              alt="Old Age Home Services"
-              width={800}
-              height={400}
-              className="rounded-lg mb-6 w-full"
-            />
-
             <ul className="space-y-4 list-disc list-inside text-gray-700">
               <li>
                 <strong>Safe & Clean Accommodation:</strong> Comfortable,
@@ -83,15 +82,6 @@ const OldAge = () => {
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
               Why Shine Old Age Home Matters
             </h2>
-
-            <Image
-              src="/service/Oldagehome/oldage2.JPG"
-              alt="Why Old Age Home Matters"
-              width={800}
-              height={400}
-              className="rounded-lg mb-6 w-full"
-            />
-
             <p className="text-gray-700">
               In today’s world, many elderly women face loneliness, neglect, and
               health challenges. Shine Old Age Home offers them companionship,
@@ -159,6 +149,22 @@ const OldAge = () => {
             <p><strong>Phone:</strong> +91 80999 90221</p>
             <p><strong>Email:</strong> info@shinengo.org</p>
           </section>
+           <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  my-5">
+                        {oldAgeImages.map((img, index) => (
+                          <div
+                            key={index}
+                            className="w-full overflow-hidden rounded-xl shadow-md"
+                          >
+                            <Image
+                              alt={`Tailoring ${index + 1}`}
+                              src={img.src}
+                              width={400}
+                              height={400}
+                              className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                          </div>
+                        ))}
+                      </div>
 
           {/* Donate */}
           <Razorpay />

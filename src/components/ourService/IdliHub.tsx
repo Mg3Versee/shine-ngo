@@ -5,6 +5,16 @@ import ServicesSidebar from "../ServicesSidebar";
 import Razorpay from "../razorpay/Razorpay";
 import Image from "next/image";
 
+const idliImages =[
+  {src: "/service/IdlyHub/idli.jpg"},
+  {src: "/service/IdlyHub/idli1.jpg"},
+  {src: "/service/IdlyHub/idli2.jpg"},
+  {src: "/service/IdlyHub/idli3.jpg"},
+  {src: "/service/IdlyHub/idli4.jpg"},
+  {src: "/service/IdlyHub/idli5.jpg"},
+  {src: "/service/IdlyHub/idli6.jpg"},
+]
+
 const IdliHub = () => {
   return (
     <div>
@@ -23,14 +33,6 @@ const IdliHub = () => {
               compassionate food initiative ensuring that no one goes hungry.
             </p>
           </section>
-          <Image
-            src="/service/IdlyHub/idli.jpg"
-            alt="Idli Hub Image"
-            width={800}
-            height={400}
-            className="mb-4"
-          />
-
           <section className="py-12 px-4">
             <div className="max-w-6xl mx-auto text-gray-700 space-y-4 leading-relaxed">
               <p>
@@ -72,13 +74,6 @@ const IdliHub = () => {
               </ul>
             </div>
           </section>
-          <Image
-            src="/service/IdlyHub/idli1.jpg"
-            alt="Idli Hub Image"
-            width={800}
-            height={400}
-            className="mb-4"
-          />
           <section className="py-12 px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -146,6 +141,22 @@ const IdliHub = () => {
               </p>
             </div>
           </section>
+             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  my-5">
+                                  {idliImages.map((img, index) => (
+                                    <div
+                                      key={index}
+                                      className="w-full overflow-hidden rounded-xl shadow-md"
+                                    >
+                                      <Image
+                                        alt={`Tailoring ${index + 1}`}
+                                        src={img.src}
+                                        width={400}
+                                        height={400}
+                                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                                      />
+                                    </div>
+                                  ))}
+                                </div>
           <Razorpay />
         </div>
 

@@ -2,11 +2,11 @@ import Image from "next/image";
 import PageBanner from "../PageBanner";
 import ServicesSidebar from "../ServicesSidebar";
           const childwidowImages = [
-  { src: "/service/CovidWidowwomen/covid.jpg" },
-  { src: "/service/CovidWidowwomen/covid33.jpg" },
-  { src: "/service/CovidWidowwomen/covid34.jpg" },
-  { src: "/service/CovidWidowwomen/covidreli31.jpg" },
-  { src: "/service/CovidWidowwomen/covidreli32.jpg" },
+  { src: "/service/CovidWidowwomen/covid1.jpg" },
+  { src: "/service/CovidWidowwomen/covid2.jpg" },
+  { src: "/service/CovidWidowwomen/covid3.jpg" },
+  { src: "/service/CovidWidowwomen/covid4.jpg" },
+
 ];
 const CovidWidowWomen =()=> {
   return (
@@ -178,7 +178,7 @@ const CovidWidowWomen =()=> {
           </p>
         </div>
       </section>
- <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 my-5">
+ <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  my-5">
               {childwidowImages.map((img, index) => (
                 <div
                   key={index}

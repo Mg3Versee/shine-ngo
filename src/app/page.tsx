@@ -14,7 +14,7 @@ import PopupAnnouncement from '../components/PopupAnnouncement'
 const latestPost = {
   title: "🌟 New Post Published!",
   message: "Check out our latest article on how to support elderly women in need.",
-  imageUrl: "/updates/update-popup.jpg", 
+  imageUrl: "/about/about-1.png", 
 };
 
 
