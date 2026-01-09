@@ -10,7 +10,7 @@ const  FundRaising =() => {
       description: "Share a meal, spread love—donate today to fight hunger!",
     },
     {
-      src: "/service/oldage.jpg",
+      src: "/service/Oldagehome/oldage.jpg",
       slug: "image-2",
       title: "Old Age Home ",
       description:
